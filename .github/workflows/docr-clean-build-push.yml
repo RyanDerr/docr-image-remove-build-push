@@ -4,11 +4,11 @@ on:
   workflow_call:
     inputs:
       image-registry-name:
-        description: 'The name of the digital ocean registry'
+        description: 'The name of the Digital Ocean Registry'
         type: string
         required: true
       image-name:
-        description: 'The name of the Docker image to push (e.g. my-app)'
+        description: 'The name of the docker image to push (e.g. my-app)'
         type: string
         required: true
       image-store-limit:
