@@ -1,0 +1,22 @@
+name: Digital Ocean Container Registry Image Removal
+description: Remove Old image tags from Digital Ocean's Container Registry
+branding:
+  icon: 'trash'
+  color: 'red'
+
+inputs:
+  image-repository-name:
+    description: 'Image repository name in the Container Registry'
+    required: true
+  image-storage-limit:
+    description: 'Number of recent images allowed'
+    required: false
+    default: -1
+
+runs:
+  using: composite
+  steps:
+    - name: Remove images older than the last n versions
+      if: ${{ inputs.image-storage-limit > -1 }}
+      shell: bash
+      run: ${{ github.action_path }}/remove_images.sh ${{ inputs.image-repository-name }} ${{ inputs.image-storage-limit }}
