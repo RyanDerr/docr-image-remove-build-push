@@ -11,7 +11,7 @@ This repository is designed to container workflow templates that can be called b
 
 ### Workflows 
 
-- [Digital Ocean Container Registry Clean-Build-Push](.github/workflows/README.md#docr-clean-build-push)
+- [Workflow Table Of Contents](.github/workflows/README.md#table-of-contents)
 
 
 
